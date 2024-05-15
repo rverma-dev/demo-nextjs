@@ -5,7 +5,11 @@
     "dev": "next dev",
     "prettier": "prettier --write --ignore-unknown .",
     "prettier:check": "prettier --check --ignore-unknown .",
-    "start": "next start"
+    "start": "next start",
+    "pages:build": "npx @cloudflare/next-on-pages",
+    "preview": "npm run pages:build && wrangler pages dev",
+    "deploy": "npm run pages:build && wrangler pages deploy",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv env.d.ts"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
@@ -25,6 +29,7 @@
   },
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.11.3",
+    "@cloudflare/workers-types": "^4.20240512.0",
     "@types/bcrypt": "^5.0.1",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.14",
@@ -33,11 +38,13 @@
     "eslint": "^8.52.0",
     "eslint-config-next": "^14.0.0",
     "eslint-config-prettier": "9.0.0",
+    "eslint-plugin-next-on-pages": "^1.11.3",
     "prettier": "^3.0.3",
     "prettier-plugin-tailwindcss": "0.5.4",
     "wrangler": "^3.56.0"
   },
   "engines": {
     "node": ">=18.17.0"
-  }
+  },
+  "packageManager": "yarn@4.2.2"
 }
