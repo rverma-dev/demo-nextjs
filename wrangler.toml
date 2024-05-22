@@ -61,10 +61,6 @@ database_id = "6eba236e-1762-4196-8bfd-3ce10f0fdc0c"
 # binding = "MY_KV_NAMESPACE"
 # id = "<PREVIEW_NAMESPACE_ID>"
 
-routes = [
-	{ pattern = "app.dhritips.biz", custom_domain = true }
-]
-
 ######## PRODUCTION environment config ########
 
 # [env.production.vars]
@@ -73,7 +69,3 @@ routes = [
 # [[env.production.kv_namespaces]]
 # binding = "MY_KV_NAMESPACE"
 # id = "<PRODUCTION_NAMESPACE_ID>"
-
-routes = [
-	{ pattern = "app.dhritips.biz", custom_domain = true }
-]
