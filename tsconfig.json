@@ -19,11 +19,9 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./src/*"]
     },
-    "types": [
-      "@cloudflare/workers-types/2023-07-01"
-    ]
+    "types": ["@cloudflare/workers-types/2023-07-01"]
   },
   "include": [
     "next-env.d.ts",
@@ -31,7 +29,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "app/lib/*-data.js",
-    "scripts/seed.js"
-, "jest.config.ts"  ],
+    "scripts/seed.js",
+    "jest.config.ts"
+  ],
   "exclude": ["node_modules"]
 }
